@@ -1,0 +1,8 @@
+<p>query-selector works!</p>
+
+
+
+<button (click)="Dec()" [disabled]="count==0"  >Dec</button><input name="displayField" type="text" [(ngModel)] = "count"  /><button (click)="Inc()">Inc</button>
+<div *ngIf="count==0">Note: Dec button is disabled</div>
+<div *ngIf="count!=0">Note: Dec button is enabled</div>
+<div>{{count}}</div>

@@ -1,22 +1,42 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
-
+import { CourseService } from './courses.service';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeService } from './employee.service';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { EditemployeeComponent } from './editemployee/editemployee.component';
+import { QuantityIncreamentComponent } from './quantity-increament/quantity-increament.component';
+import { QuerySelectorComponent } from './query-selector/query-selector.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent
+    CourseComponent,
+    EmployeeComponent,
+    FavoriteComponent,
+    EditemployeeComponent,
+    QuantityIncreamentComponent,
+    QuerySelectorComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+  BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    CourseService,
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

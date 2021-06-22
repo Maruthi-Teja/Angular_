@@ -1,4 +1,29 @@
-<h1>Favorite Movie  </h1>
+<!-- <h1>Favorite Movie  </h1>
  
-<h1>{{favoriteMovie}}</h1>
-<courses></courses>
+<h1>{{favoriteMovie}}</h1> -->
+<!-- <courses></courses> -->
+<!-- <favorite></favorite> -->
+<!-- <app-employee></app-employee> -->
+<ul >
+    <li>
+        <a [routerLink]="['/view-emp']" [routerLinkActive]="'active'">View-Employeee</a>
+    </li>
+<li>
+    <a [routerLink]="['/edit-emp']" [routerLinkActive]="'active'">Edit-Employeee</a>
+</li>
+
+<li> 
+    <a [routerLink] = "['/quantity-increment']" [routerLinkActive]="'active'">Quantity-increament</a>
+</li>
+<li> 
+    <a [routerLink] = "['/quantity-selector']" [routerLinkActive]="'active'">Quantity-selector</a>
+</li>
+<li> 
+    <a [routerLink] = "['/template-form']" [routerLinkActive]="'active'">Edit employee template - from</a>
+</li>
+<li> 
+    <a [routerLink] = "['/reactive-form']" [routerLinkActive]="'active'">edit employee Reactive - from</a>
+</li>
+
+</ul>
+<router-outlet></router-outlet>

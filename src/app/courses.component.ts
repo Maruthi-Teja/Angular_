@@ -1,22 +1,21 @@
 
 
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { CourseService } from './courses.service';
 
 @Component({
     selector : 'courses' ,
     template : `
     <h2>{{  title}}</h2>
-      <ul>
-          <li  *ngFor="let course of courses"> 
-                {{course}}
-          </li>
-      </ul>
+    <input  [(ngModel)] = "email" (keyup.enter)="onKeyUp()" /><br>
+    <button class="btn btn-primary">Button</button>
     `
 })
 export class CoursesComponent{
 
     title = "courese-list";
-
-    courses = ["java","spring ","hibernate"];
-
+    email = "maruthiteja@gmail.com";
+    onKeyUp(){
+        console.log(this.email);
+    }
 }

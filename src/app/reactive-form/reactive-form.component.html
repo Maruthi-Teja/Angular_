@@ -1,0 +1,8 @@
+
+<form [formGroup]="empForm">
+Name: <input   type="text" formControlName="username" class="form-control">
+<!-- <div *ngIf= "!name.valid">Input field is required</div> -->
+ <div *ngIf = "empForm.get('username')?.invalid">
+  <div class="alert alert-danger">username is required</div>
+ </div>
+</form>

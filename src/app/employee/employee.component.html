@@ -1,0 +1,26 @@
+
+<div class="border border-primary">
+<h2>employee name : {{emp.id}}<br>
+    employee id  : {{emp.name}}<br>
+    employee salary :{{emp.salary | currency : 'INR'}}<br>
+</h2>
+<p *ngIf=emp.permanent>
+    {{emp.permanent}}
+</p>
+<h1>{{emp.department.id}}</h1>
+<h1>{{emp.department.name}}</h1>
+<table>
+    <caption>Skills of the employee</caption>
+  <tr>
+      <td>Skill ID</td>
+      <td>Skill Name</td>
+  </tr>
+  <tr *ngFor="let skill of emp.skills">
+      <td>{{skill.id}}</td>
+      <td>{{skill.name}}</td>
+  </tr>
+   
+</table>
+<h1> Date of Birth  : {{ current_date | date}}</h1>
+
+</div>
