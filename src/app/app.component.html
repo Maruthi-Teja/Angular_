@@ -4,6 +4,7 @@
 <!-- <courses></courses> -->
 <!-- <favorite></favorite> -->
 <!-- <app-employee></app-employee> -->
+
 <ul >
     <li>
         <a [routerLink]="['/view-emp']" [routerLinkActive]="'active'">View-Employeee</a>
@@ -25,5 +26,11 @@
     <a [routerLink] = "['/reactive-form']" [routerLinkActive]="'active'">edit employee Reactive - from</a>
 </li>
 
+<li>
+    <a [routerLink] = "['/employees']"  [routerLinkActive] ="'active'">Employee List</a>
+</li>
+<li>
+    <a [routerLink] = "['/login-form']"  [routerLinkActive] ="'active'">Login </a>
+</li>
 </ul>
 <router-outlet></router-outlet>

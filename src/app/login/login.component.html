@@ -1,11 +1,23 @@
-<p>login works!</p>
 
-
-<form>
-
-    <div ngForm=>
+<h1 [ngStyle]="{
+    'text-align': 'center'
+}">Login Form</h1>
+<div *ngIf = "!valid" class="alert alert-danger">
+    Please enter valid username and password
+</div>
+<div class="container">
+<form [formGroup] = "loginForm"  (ngSubmit)= "login()">
+   
+    <div class="form-group">
         <label for="username">Name:
-         <input type="text" formControlName="username">
+         <input type="text" formControlName="username" placeholder="Enter username" class="form-control">
         </label>
     </div>
+    <div class="form-group">
+        <label for="password">Password:
+         <input type="text" formControlName="password" placeholder="Enter password" class="form-control">
+        </label>
+    </div>
+    <button class="btn btn-outline-primary " type="submit">submit</button>
 </form>
+</div>

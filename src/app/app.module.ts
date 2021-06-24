@@ -14,6 +14,10 @@ import { QuantityIncreamentComponent } from './quantity-increament/quantity-incr
 import { QuerySelectorComponent } from './query-selector/query-selector.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeInfoComponent } from './employee-info/employee-info.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     QuantityIncreamentComponent,
     QuerySelectorComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    EmployeeListComponent,
+    EmployeeInfoComponent,
+    LoginComponent
   ],
   imports: [
   BrowserModule,
@@ -35,7 +42,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
   ],
   providers: [
     CourseService,
-    EmployeeService
+    EmployeeService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
