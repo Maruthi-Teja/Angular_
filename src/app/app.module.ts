@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,9 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeInfoComponent } from './employee-info/employee-info.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
+import { PostsComponent } from './posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +36,15 @@ import { AuthService } from './auth.service';
     ReactiveFormComponent,
     EmployeeListComponent,
     EmployeeInfoComponent,
-    LoginComponent
+    LoginComponent,
+    PostsComponent
   ],
   imports: [
-  BrowserModule,
+BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     CourseService,
